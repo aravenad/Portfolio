@@ -316,7 +316,7 @@ section {
     height: 100px;
 }
 
-#linkedin img{
+#linkedin img {
     width: 100px;
     height: 100px;
 }
@@ -337,9 +337,100 @@ section {
     animation: bounce 2s infinite;
 }
 
+#about {
+    padding-top: 6rem;
+}
+
+section h1 {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
 section h2 {
-    font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.skills-n-hobbies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 10rem;
+}
+
+.snh-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.skills-desc {
+    width: 900px;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.skills-desc p {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 0.03fr);
+    grid-template-rows: repeat(3, 0fr);
+    gap: 1rem;
+    align-content: center;
+}
+
+.image-grid img {
+    width: 120px;
+    border-radius: 10%;
+}
+
+.snh-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.hobbies-desc {
+    width: 900px;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.hobbies-p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.p-left {
+    width: 420px;
+}
+
+.p-right {
+    width: 420px;
+}
+
+.hobbies-desc p {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
 }
 
 footer {
