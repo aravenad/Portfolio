@@ -2,34 +2,72 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main-style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./styles/main-style.css"/>
     <title>Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div>
-                <a href="./index.html">
-                    <span>Damien ARAVENA BRAVO</span>
-                    <span id="job-title">Étudiant — Développeur</span>
+<header>
+    <nav>
+        <div>
+            <a href="./index.html">
+                <span>Damien ARAVENA BRAVO</span>
+                <span id="job-title">Étudiant — Développeur</span>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="./index.html#about">À propos</a>
+            <li>
+                <a href="./index.html#projects">Projets</a>
+            </li>
+            <li>
+                <a href="./index.html#contact">Contact</a>
+            </li>
+            <li>
+                <a href="./doc/CV.pdf" id="download-cv" download>Télécharge mon CV</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="header">
+        <div class="header-left-side">
+            <img src="./img/photo-rbg.png" alt="damien-aravena"/>
+        </div>
+        <div class="header-right-side">
+            <div class="keyboard">
+                <span class="key">></span>
+                <span class="key">B</span>
+                <span class="key">i</span>
+                <span class="key">e</span>
+                <span class="key">n</span>
+                <span class="key">v</span>
+                <span class="key">e</span>
+                <span class="key">n</span>
+                <span class="key">u</span>
+                <span class="last-key">|</span>
+            </div>
+            <div class="header-desc">
+                <p>
+                    Je suis un étudiant en informatique de 22 ans, actuellement basé à Grenoble. Passionné par
+                    l'informatique, j'explore activement la programmation et le développement logiciel. Ce portfolio
+                    présente une sélection de mes projets et travaux, illustrant mes compétences techniques.
+                </p>
+            </div>
+            <div class="header-socials">
+                <a id="github" href="https://github.com/aravenad" target="_blank" rel="noopener noreferrer">
+                    <img src="./img/github.svg" alt="github"/>
+                </a>
+                <a id="linkedin" href="https://www.linkedin.com/in/aravenad/" target="_blank" rel="noopener noreferrer">
+                    <img src="./img/linkedin.svg" alt="linkedin"/>
                 </a>
             </div>
-            <ul>
-                <li>
-                    <a href="./index.html#about">À propos</a>
-                <li>
-                    <a href="./index.html#projects">Projets</a>
-                </li>
-                <li>
-                    <a href="./index.html#contact">Contact</a>
-                </li>
-                <li>
-                    <a href="./doc/CV.pdf" download>Télécharge mon CV</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        </div>
+        <div class="scroll-down">
+            <img src="./img/arrow-scroll-down.png" alt="scroll-down"/>
+        </div>
+    </section>
     <section id="about">
         <div>
             <h2>À propos</h2>
@@ -50,5 +88,11 @@
             <h2>CV</h2>
         </div>
     </section>
+</main>
+<footer></footer>
+<div class="scroll-up">
+    <img src="./img/arrow-scroll-up.png" alt="scroll-up"/>
+</div>
+<script src="./scripts/scroll.js"></script>
 </body>
 </html>
