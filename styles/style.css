@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 @keyframes fadeIn {
@@ -168,6 +169,7 @@ nav div a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 #job-title {
@@ -186,6 +188,8 @@ nav ul {
 }
 
 nav ul li {
+    display: flex;
+    align-items: center;
     margin-right: 1rem;
 }
 
@@ -193,10 +197,15 @@ nav ul li a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
     color: #f7cba3;
+}
+
+.div-span {
+    display: flex;
 }
 
 #download-cv {
@@ -206,6 +215,7 @@ nav ul li a:hover {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
 
 #download-cv:hover {
@@ -295,10 +305,6 @@ section {
     animation: pressDown8 2.2s infinite;
 }
 
-.key:nth-child(10) {
-    animation: pressDown8 3s infinite;
-}
-
 .last-key {
     display: inline-block;
     font-size: 2.5rem;
@@ -334,6 +340,16 @@ section {
 #linkedin img {
     width: 100px;
     height: 100px;
+}
+
+.header-socials img {
+    transition: transform 0.2s;
+}
+
+.header-socials img:hover {
+    background: #f7cba3;
+    border-radius: 50%;
+    transform: scale(1.1);
 }
 
 .scroll-down {
@@ -456,7 +472,6 @@ section h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    padding: 2rem;
 }
 
 .project-card {
