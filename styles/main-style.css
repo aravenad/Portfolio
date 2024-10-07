@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes pressDown1 {
     30%,
     40%,
@@ -137,6 +148,8 @@ header {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 nav {
@@ -212,8 +225,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .header-left-side {
@@ -431,6 +446,83 @@ section h2 {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
+}
+
+#projects {
+    padding-top: 6rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+}
+
+.project-content {
+    flex-grow: 1; /* Allow the content to grow and push the button down */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-content p {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    max-height: 80px; /* Limit the height of the text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-content a {
+    display: block;
+    text-align: center;
+    background: #f7cba3;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.project-content a:hover {
+    background: #f5e1c5;
 }
 
 footer {
